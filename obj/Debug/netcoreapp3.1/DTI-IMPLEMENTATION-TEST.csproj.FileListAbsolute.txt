@@ -1,0 +1,13 @@
+D:\Arquivos e Programas\VSCODE\DTI-IMPLEMENTATION-TEST\bin\Debug\netcoreapp3.1\DTI-IMPLEMENTATION-TEST.exe
+D:\Arquivos e Programas\VSCODE\DTI-IMPLEMENTATION-TEST\bin\Debug\netcoreapp3.1\DTI-IMPLEMENTATION-TEST.deps.json
+D:\Arquivos e Programas\VSCODE\DTI-IMPLEMENTATION-TEST\bin\Debug\netcoreapp3.1\DTI-IMPLEMENTATION-TEST.runtimeconfig.json
+D:\Arquivos e Programas\VSCODE\DTI-IMPLEMENTATION-TEST\bin\Debug\netcoreapp3.1\DTI-IMPLEMENTATION-TEST.runtimeconfig.dev.json
+D:\Arquivos e Programas\VSCODE\DTI-IMPLEMENTATION-TEST\bin\Debug\netcoreapp3.1\DTI-IMPLEMENTATION-TEST.dll
+D:\Arquivos e Programas\VSCODE\DTI-IMPLEMENTATION-TEST\bin\Debug\netcoreapp3.1\DTI-IMPLEMENTATION-TEST.pdb
+D:\Arquivos e Programas\VSCODE\DTI-IMPLEMENTATION-TEST\obj\Debug\netcoreapp3.1\DTI-IMPLEMENTATION-TEST.csprojAssemblyReference.cache
+D:\Arquivos e Programas\VSCODE\DTI-IMPLEMENTATION-TEST\obj\Debug\netcoreapp3.1\DTI-IMPLEMENTATION-TEST.AssemblyInfoInputs.cache
+D:\Arquivos e Programas\VSCODE\DTI-IMPLEMENTATION-TEST\obj\Debug\netcoreapp3.1\DTI-IMPLEMENTATION-TEST.AssemblyInfo.cs
+D:\Arquivos e Programas\VSCODE\DTI-IMPLEMENTATION-TEST\obj\Debug\netcoreapp3.1\DTI-IMPLEMENTATION-TEST.csproj.CoreCompileInputs.cache
+D:\Arquivos e Programas\VSCODE\DTI-IMPLEMENTATION-TEST\obj\Debug\netcoreapp3.1\DTI-IMPLEMENTATION-TEST.dll
+D:\Arquivos e Programas\VSCODE\DTI-IMPLEMENTATION-TEST\obj\Debug\netcoreapp3.1\DTI-IMPLEMENTATION-TEST.pdb
+D:\Arquivos e Programas\VSCODE\DTI-IMPLEMENTATION-TEST\obj\Debug\netcoreapp3.1\DTI-IMPLEMENTATION-TEST.genruntimeconfig.cache
