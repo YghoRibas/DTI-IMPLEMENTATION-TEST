@@ -9,7 +9,8 @@ namespace DTI_IMPLEMENTATION_TEST
         public double priceBigWeekend { get; set; }
         public int distance { get; set; }    
         public int smallCounter { get; set; }
-        public int bigCounter { get; set; }   
+        public int bigCounter { get; set; } 
+        public double finalPrice { get; set; } 
     }
 
 }

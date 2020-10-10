@@ -5,44 +5,29 @@ namespace DTI_IMPLEMENTATION_TEST
 {
     class Program
     {
-        /*
-        public static double CalculatePrice(List<PetShop> attributes, DateTime Scheduled)
+        
+        public static void CalculatePrice(List<PetShop> attributes, DateTime Scheduled)
         {
-            double finalPrice;
 
             //NIVEL DE COMPLEXIDADE T1
-                if(Scheduled.DayOfWeek == DayOfWeek.Saturday || Scheduled.DayOfWeek == DayOfWeek.Sunday)
+            if(Scheduled.DayOfWeek == DayOfWeek.Saturday || Scheduled.DayOfWeek == DayOfWeek.Sunday)
+            {
+                for(int i = 0; i < attributes.Count ; i++)
                 {
-                    for(int i = 0; i < attributes.Count ; i++)
-                    {
-                        
-                    }
+                    attributes[i].finalPrice = (attributes[i].bigCounter * attributes[i].priceBigWeekend) +
+                     (attributes[i].smallCounter * attributes[i].priceSmallWeekend);
                 }
-                else
+            }
+            else
+            {
+                for(int i = 0; i < attributes.Count; i++)
                 {
-                    for(int i = 0; i < attributes.Count; i++)
-                    {
-                        
-                    }
+                    attributes[i].finalPrice = (attributes[i].bigCounter * attributes[i].priceBig) +
+                     (attributes[i].smallCounter * attributes[i].priceSmall);        
                 }
-
-            //NIVEL DE COMPLEXIDADE T2
-            
-                 for(int i = 0; i < Length; i++)
-                {
-                    if(Scheduled.DayOfWeek == DayOfWeek.Saturday || Scheduled.DayOfWeek == DayOfWeek.Sunday)
-                    {
-                            
-                    }
-                    else
-                    {
-
-                    }
-                }
-            
-            return finalPrice;
+            }
         }
-        */
+        
         static void Main(string[] args)
         {
             System.Globalization.CultureInfo.DefaultThreadCurrentCulture = new System.Globalization.CultureInfo("pt-BR");
@@ -50,15 +35,16 @@ namespace DTI_IMPLEMENTATION_TEST
             int smallCount;
             int bigCount;
 
-            Console.WriteLine("Insira uma data de agendamento.");
+            
             Console.WriteLine("Insira a quantidade de cachorros de pequeno porte.");
             smallCount = int.Parse(Console.ReadLine());
             Console.WriteLine("Insira a quantidade de cachorros de grande porte");
             bigCount = int.Parse(Console.ReadLine());
 
+            Console.WriteLine("Insira uma data de agendamento.");
             DateTime scheduled = DateTime.Parse(Console.ReadLine());
 
-            //*********************************************************************************************************
+            //****************************************** LIST *********************************************************
 
                 PetShop VaiRex = new PetShop()
                 {
@@ -69,7 +55,7 @@ namespace DTI_IMPLEMENTATION_TEST
                     priceSmallWeekend = 20,
                     priceBigWeekend = 55, 
                     smallCounter = smallCount,
-                    bigCounter = bigCount          
+                    bigCounter = bigCount,          
                 };
 
             //*********************************************************************************************************
@@ -77,8 +63,11 @@ namespace DTI_IMPLEMENTATION_TEST
             List<PetShop> PetShops = new List<PetShop>();
             PetShops.Add(VaiRex);
             
-               
+            //********************************************************************************************************* 
 
+            CalculatePrice(PetShops, scheduled);
+
+            Console.WriteLine(VaiRex.finalPrice);
         }
     }
 }
