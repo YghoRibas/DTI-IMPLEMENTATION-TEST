@@ -8,8 +8,6 @@ namespace DTI_IMPLEMENTATION_TEST
         
         public static void CalculatePrice(List<PetShop> attributes, DateTime Scheduled)
         {
-
-            //NIVEL DE COMPLEXIDADE T1
             if(Scheduled.DayOfWeek == DayOfWeek.Saturday || Scheduled.DayOfWeek == DayOfWeek.Sunday)
             {
                 for(int i = 0; i < attributes.Count ; i++)
@@ -33,8 +31,7 @@ namespace DTI_IMPLEMENTATION_TEST
             System.Globalization.CultureInfo.DefaultThreadCurrentCulture = new System.Globalization.CultureInfo("pt-BR");
 
             int smallCount;
-            int bigCount;
-
+            int bigCount;  
             
             Console.WriteLine("Insira a quantidade de cachorros de pequeno porte.");
             smallCount = int.Parse(Console.ReadLine());
@@ -52,22 +49,58 @@ namespace DTI_IMPLEMENTATION_TEST
                     priceSmall =  15.00,
                     priceBig = 50.00,
                     distance = 1700,
-                    priceSmallWeekend = 20,
-                    priceBigWeekend = 55, 
+                    priceSmallWeekend = 20.00,
+                    priceBigWeekend = 55.00, 
                     smallCounter = smallCount,
                     bigCounter = bigCount,          
+                };
+
+                PetShop MeuCanino = new PetShop()
+                {
+                    petShopName = "Meu Canino",
+                    priceSmall =  20.00,
+                    priceBig = 40.00,
+                    distance = 2000,
+                    priceSmallWeekend = 20.00 * (1.2),
+                    priceBigWeekend = 40.00 * (1.2), 
+                    smallCounter = smallCount,
+                    bigCounter = bigCount,   
+                };
+
+                PetShop ChowChawgs = new PetShop()
+                {
+                    petShopName = "ChowChawgs",
+                    priceSmall =  30.00,
+                    priceBig = 45.00,
+                    distance = 800,
+                    priceSmallWeekend = 30.00,
+                    priceBigWeekend = 45.00, 
+                    smallCounter = smallCount,
+                    bigCounter = bigCount,   
                 };
 
             //*********************************************************************************************************
 
             List<PetShop> PetShops = new List<PetShop>();
             PetShops.Add(VaiRex);
+            PetShops.Add(MeuCanino);
+            PetShops.Add(ChowChawgs);
             
             //********************************************************************************************************* 
 
             CalculatePrice(PetShops, scheduled);
 
-            Console.WriteLine(VaiRex.finalPrice);
+            Console.WriteLine($"{PetShops[0].distance},{PetShops[0].finalPrice}");
+            Console.WriteLine($"{PetShops[1].distance},{PetShops[1].finalPrice}");
+            Console.WriteLine($"{PetShops[2].distance},{PetShops[2].finalPrice}");
+
+            PetShops.Sort();
+
+            Console.WriteLine($"{PetShops[0].distance},{PetShops[0].finalPrice}");
+            Console.WriteLine($"{PetShops[1].distance},{PetShops[1].finalPrice}");
+            Console.WriteLine($"{PetShops[2].distance},{PetShops[2].finalPrice}");
+
+            Console.WriteLine($"A melhor opcao e: {PetShops[0].petShopName}");
         }
     }
 }
