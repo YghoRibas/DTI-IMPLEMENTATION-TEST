@@ -1,8 +1,6 @@
-using System;
-
 namespace DTI_IMPLEMENTATION_TEST
 {
-    class PetShop : IComparable<PetShop>
+    class PetShop
     {
         public string petShopName { get; set; }
         public double priceSmall { get; set; }
@@ -12,14 +10,7 @@ namespace DTI_IMPLEMENTATION_TEST
         public int distance { get; set; }    
         public int smallCounter { get; set; }
         public int bigCounter { get; set; } 
-        public double finalPrice { get; set; } 
-
-       
-        public int CompareTo(PetShop e)
-        {
-            return this.finalPrice.CompareTo(e.finalPrice);
-        }
-        
+        public double finalPrice { get; set; }   
     }
 
 }

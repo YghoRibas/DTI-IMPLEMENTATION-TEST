@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using DTI_IMPLEMENTATION_TEST;
 
-namespace DTI_IMPLEMENTATION_TEST
+namespace System.Linq
 {
     class Program
     {
@@ -90,17 +91,12 @@ namespace DTI_IMPLEMENTATION_TEST
 
             CalculatePrice(PetShops, scheduled);
 
-            Console.WriteLine($"{PetShops[0].distance},{PetShops[0].finalPrice}");
-            Console.WriteLine($"{PetShops[1].distance},{PetShops[1].finalPrice}");
-            Console.WriteLine($"{PetShops[2].distance},{PetShops[2].finalPrice}");
-
-            PetShops.Sort();
-
-            Console.WriteLine($"{PetShops[0].distance},{PetShops[0].finalPrice}");
-            Console.WriteLine($"{PetShops[1].distance},{PetShops[1].finalPrice}");
-            Console.WriteLine($"{PetShops[2].distance},{PetShops[2].finalPrice}");
-
-            Console.WriteLine($"A melhor opcao e: {PetShops[0].petShopName}");
+            IEnumerable<PetShop> query = 
+            from elements in PetShops
+                orderby elements.finalPrice, elements.distance
+                select elements;
+                 
+            Console.WriteLine(query.First().petShopName);
         }
     }
 }
